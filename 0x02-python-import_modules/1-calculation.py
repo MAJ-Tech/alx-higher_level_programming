@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" Prints the sum of 1and 2 """
 from calculator_1 import add, sub, mul, div
 a = 10
 b = 5
