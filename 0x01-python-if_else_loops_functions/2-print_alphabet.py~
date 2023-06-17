@@ -1,3 +1,0 @@
-#!/usr/bin/python3
-alphabets = ''.join(chr(i) for i in range(97, 124))
-print(f"{alphabets}")
