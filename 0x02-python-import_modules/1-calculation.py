@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-if __name__ "__main__":
-    """ Prints the sum of 1and 2 """
-    from calculator_1 import add, sub, mul, div
+from calculator_1 import add, sub, mul, div
+if __name__ == "__main__":
+    """a program that imports functions from the file calculator_1.py"""
     a = 10
     b = 5
     print("{} + {} = {}".format(a, b, add(a, b)))
