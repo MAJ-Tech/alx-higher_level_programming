@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 
 def no_c(my_string):
-    edited_output = my_string.translate({ord(i): None for i in 'cC'})
-    return edited_output
+    new_string = ""
+    for char in my_string:
+        if char.lower() != 'c' and char.upper != 'C':
+            new_string += char
+    return new_string
