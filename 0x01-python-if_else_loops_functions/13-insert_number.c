@@ -16,26 +16,35 @@
 listint_t *insert_node(listint_t **head, int number)
 {
 	listint_t *slow, *fast, *new_node;
+	/** ALLOCATE MEMORY FOR THE NEW NODE */
 	slow = *head;
 	fast = (*head)->next;
-	/** ALLOCATE MEMORY FOR THE NEW NODE */
 	new_node = malloc(sizeof(listint_t));
 	if (new_node == NULL)
-		return NULL;
-	while (slow != NULL)
+		return (NULL);
+	while (slow->next != NULL)
 	{
 		if (slow->n < number && fast->n > number)
 		{
 			new_node->n = number;
 			slow->next = new_node;
 			new_node->next = fast;
-			return new_node;
+			return (new_node);
 		}
 		slow = slow->next;
 		fast = fast->next;
 	}
-	new_node->n = number;
-	new_node->next = NULL;
-	*head = new_node;
-	return new_node;
+	if (*head)
+	{
+		slow->next = new_node;
+		new_node->next = NULL;
+		new_node->n = number;
+	}
+	else
+	{
+		slow->n = number;
+		slow->next = NULL;
+		*head = new_node;
+	}
+	return (new_node);
 }
