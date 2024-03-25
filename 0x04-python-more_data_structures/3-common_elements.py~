@@ -1,0 +1,9 @@
+#!/usr/bin/python3
+
+def common_elements(set_1, set_2):
+    '''  function that returns a set of common elements in two sets '''
+    results = []
+    for element1, element2 in zip(set_1, set_2):
+        if element1 == element2:
+            results.append(element1)
+    return results
