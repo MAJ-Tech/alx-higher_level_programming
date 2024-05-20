@@ -4,8 +4,9 @@
 
 This is a module for practicing my first python classes and methods
 """
-class Square:
 
+
+class Square:
 
     """
     This is an empty class that defines a square
@@ -13,7 +14,7 @@ class Square:
     Attributes:
     size (int): The size of the Squares
     """
-    def __init__(self, size):
+    def __init__(self, size=0):
         """
         The Constructor of the class Square
 
@@ -21,5 +22,8 @@ class Square:
 
         size (int): The size of the square
         """
-
+        if not isinstance(size, int):
+            raise TypeError("size must be an integer")
+        if size < 0:
+            raise ValueError("size must be >= 0")
         self.__size = size
