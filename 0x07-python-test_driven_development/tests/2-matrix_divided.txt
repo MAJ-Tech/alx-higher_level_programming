@@ -1,7 +1,19 @@
 #This is a doctest the matrix-divided function in the matrix-divided module
+---------------------------------------------------------------------------
 
->>> matrix_divided = __import__('2-matrix_divided').matrix_divided
 
->>> matrix = [[2, 3, 5, 6], [7, 8, 1, 5]]
->>> matrix_divided(matrix, 2)
-[[1.0, 1.5, 2.5, 3.0], [3.5, 4.0, 0.5, 2.5]]
+#First import ``` matrix_divide ``` function
+       >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+#Check if all matrix items are int or floats
+       >>> matrix = [[1, 2, 3], [4, 5, 6]]
+       >>> matrix_divided(matrix, 2)
+       [[0.5, 1.0, 1.5], [2.0, 2.5, 3.0]]
+
+
+#Check for Non int/floats in matrix
+       >>> matrix = [['h', 'o', 'l'], ['b', 5, 6]]
+       >>> matrix_divided(matrix, 2)
+       Traceback (most recent call last):
+       ...
+       TypeError:matrix must be a matrix (list of lists) of integers/floats
