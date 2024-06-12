@@ -1,0 +1,34 @@
+--------------------------------------------------------------------------------
+#This is doctest module for the function ```say_my_name``` in module 3-say_my_name
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+#Import ```say_my_name``` function from 3-say_my_name modile
+	>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+--------------------------------------------------------------------------------
+
+#Test with two strings
+      >>> say_my_name("John", "Smith")
+      My name is John Smith
+
+--------------------------------------------------------------------------------
+
+#Test for one string
+      >>> say_my_name("Bob")
+      My name is Bob ""
+
+--------------------------------------------------------------------------------
+
+#Test for int(on first_name) and string
+      >>> say_my_name(12, "White")
+      Traceback (most recent call last):
+      		...
+      TypeError: first_name must be a string
+
+--------------------------------------------------------------------------------
+#Test for string and int(on last_name)
+      >>> say_my_name("Barry", None)
+      Traceback (most recent call last):
+      		...
+      TypeError: last_name must be a string
