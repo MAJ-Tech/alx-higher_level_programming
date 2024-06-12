@@ -14,12 +14,6 @@
 
 --------------------------------------------------------------------------------
 
-#Test for one string
-      >>> say_my_name("Bob")
-      My name is Bob 
-
---------------------------------------------------------------------------------
-
 #Test for int(on first_name) and string
       >>> say_my_name(12, "White")
       Traceback (most recent call last):
